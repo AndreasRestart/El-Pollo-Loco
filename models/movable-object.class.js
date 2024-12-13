@@ -2,8 +2,8 @@ class MovableObject {
     x = 120;
     y = 250;
     img;
-    heigt = 100;
-    width = 100;
+    heigt = 195;
+    width = 90;
 
 
 loadImage(path) {
