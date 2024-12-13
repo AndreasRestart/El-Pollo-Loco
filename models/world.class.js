@@ -1,9 +1,14 @@
 class World {
   character = new Character();
-  enemies = [new Chicken(),
-            new Chicken(),
-            new Chicken()
-        ];
+  enemies = [new Chicken(), new Chicken(), new Chicken()];
+  cloud = [new Cloud()];
+
+  backgroundObjects = [
+      new BackgroundObject("img/5_background/layers/3_third_layer/1.png",0),
+      new BackgroundObject("img/5_background/layers/2_second_layer/1.png",0),
+      new BackgroundObject("img/5_background/layers/1_first_layer/1.png",0),
+  ];
+  
   canvas;
   ctx;
 
@@ -15,31 +20,35 @@ class World {
   draw() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-    this.ctx.drawImage(
-      this.character.img,
-      this.character.x,
-      this.character.y,
-      this.character.width,
-      this.character.heigt,
-    );
 
-    this.enemies.forEach(enemy => {
-    this.ctx.drawImage(
-        this.enemy.img,
-        this.enemy.x,
-        this.enemy.y,
-        this.enemy.width,
-        this.enemy.heigt,
-      );
-});
-
-
-
-
+   
+    this.addObjectsToMap(this.backgroundObjects);
+    this.addObjectsToMap(this.cloud);
+    this.addToMap(this.character);
+    this.addObjectsToMap(this.enemies);
+    // this.addObjectsToMap(this.coints);
+    // this.addObjectsToMap(this.smallChicken);
+    // this.addObjectsToMap(this.endBoss);
 
     self = this;
-    requestAnimationFrame(function() {
-        self.draw();
+    requestAnimationFrame(function () {
+      self.draw();
     });
+  }
+
+  addObjectsToMap(objects) {
+    objects.forEach((object) => {
+      this.addToMap(object);
+    });
+  }
+
+  addToMap(MovibaleObject) {
+    this.ctx.drawImage(
+      MovibaleObject.img,
+      MovibaleObject.x,
+      MovibaleObject.y,
+      MovibaleObject.width,
+      MovibaleObject.heigt
+    );
   }
 }
