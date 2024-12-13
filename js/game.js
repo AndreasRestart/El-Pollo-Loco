@@ -6,7 +6,8 @@ let enemies = [
     new Chicken(),
     new Chicken(),
 ];
-let world = new World ();
+
+let world = new World();
 
 
 function init() {
