@@ -12,10 +12,10 @@ console.log('My Character is',world.character);
 
 window.addEventListener('keydown',(event) => {
     if(event.keyCode == 37) {
-        keyboard.left = true;
+        keyboard.right = true;
     }
     if(event.keyCode == 39) {
-        keyboard.right = true;
+        keyboard.left = true;
     }
     if(event.keyCode == 38) {
         keyboard.up = true;
@@ -33,10 +33,10 @@ window.addEventListener('keydown',(event) => {
 
 window.addEventListener('keyup',(event) => {
     if(event.keyCode == 37) {
-        keyboard.left = false;
+        keyboard.right = false;
     }
     if(event.keyCode == 39) {
-        keyboard.right = false;
+        keyboard.left = false;
     }
     if(event.keyCode == 38) {
         keyboard.up = false;

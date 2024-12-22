@@ -21,13 +21,11 @@ imagesWalking = [
     }
 
     animate() {
-    this.moveLeft();
-        setInterval( () => {
-            let i = this.currentImage % this.imagesWalking.length;
-            let path = this.imagesWalking[i];
-            this.img = this.imageCache[path];
-            this.currentImage++;
-            }, 200)
-      }
-
+        this.moveLeft();
+        
+        setInterval(() => {
+            this.playAnimation(this.imagesWalking);
+        }, 200)
+    }
+    
 }
