@@ -19,7 +19,12 @@ imagesWalking = [
         this.speed = 0.15 + Math.random() * 0.25
         this.animate();
     }
+// if(character.x + character.width > Chicken.x &&
+//     character.y + character.height > Chicken.y &&
+//     character.x < Chicken.x &&
+//     character.y < Chicken.y + Chicken.height
 
+// )
     animate() {
         setInterval(() => {
              this.moveLeft();
