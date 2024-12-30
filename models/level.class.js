@@ -10,5 +10,7 @@ this.enemies = enemies;
 this.smallChicken = smallChicken;
 this.clouds = clouds;
 this.backgroundObjects = backgroundObjects;
+this.coins = this.coins;
+this.bottel = this.bottel;
   }
 }

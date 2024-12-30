@@ -9,7 +9,9 @@ imagesWalking = [
     'img/3_enemies_chicken/chicken_normal/1_walk/3_w.png',
 ];
 
-
+imagesDead = [
+    "img/3_enemies_chicken/chicken_normal/2_dead/dead.png"
+  ];
 
     constructor(){
         super().loadImage("img/2_character_pepe/2_walk/W-21.png");

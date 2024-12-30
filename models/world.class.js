@@ -31,7 +31,7 @@ class World {
   }
 
   checkThrowObjects() {
-    if(this.keyboard.D) {
+    if(this.keyboard.d) {
       let bottle = new ThrowableObject(this.character.x + 100, this.character.y + 100)
       this.throwableObjects.push(bottle);
     }
@@ -45,7 +45,7 @@ class World {
       if (this.character.isColliding(enemy)) {
         this.character.hit();
         this.statusBar.setPercentage(this.character.energy)
-        this.character.height();
+      this.character.height;
         this.character.energy -= 5;
         console.log('Collision with Character, energy ', this.character.energy);
       }

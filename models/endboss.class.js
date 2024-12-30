@@ -76,10 +76,9 @@ x = 150;
 //     } else if (this.isAboveGround()) {
 //       this.playAnimation(this.imagesjumpCharacter);
 //     } else {
-//       if (this.world.keyboard.right || this.world.keyboard.left) {
 //         this.playAnimation(this.imagesWalking);
 //       }
-//     }
+    
 //   }, 100);
 // }
 
