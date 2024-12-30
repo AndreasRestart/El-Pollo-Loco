@@ -22,7 +22,7 @@ class DrawableObject {
             img.src = path;
             img.style = 'transform: scales(-1)';
             this.imageCache[path] = img;
-        })
+        });
      }
 
      drawFrame(ctx) {

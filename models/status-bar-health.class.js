@@ -15,7 +15,7 @@ percentage = 100;
 
 constructor(){
     super().loadImage('img/7_statusbars/1_statusbar/2_statusbar_health/blue/0.png');
-this.loadImage(this.images);
+this.loadImages(this.images);
 this.x = 40;
 this.y = 0;
 this.width = 200;
@@ -24,7 +24,7 @@ this.setPercentage(100);
 }
 
 setPercentage(percentage){
-    this.percentage = this.percentage;
+    this.percentage = percentage;
     let path = this.images[this.resolveImageIndex()]
     this.img = this.imageCache[path];
 }

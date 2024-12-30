@@ -43,7 +43,7 @@ x = 150;
 // "img/4_enemie_boss_chicken/4_hurt/G21.png",
 // "img/4_enemie_boss_chicken/4_hurt/G22.png",
 // "img/4_enemie_boss_chicken/4_hurt/G23.png"
-// ]
+// ];
 
 
 

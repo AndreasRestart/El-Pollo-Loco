@@ -57,7 +57,7 @@ timepassed = timepassed / 1000;
 return timepassed < 1;
 
   }
-isDead (){
+isDead() {
   return this.energy == 0;
 
 }

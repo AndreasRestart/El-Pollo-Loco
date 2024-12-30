@@ -7,23 +7,23 @@ class World {
   keyboard;
   cameraX = 0;
   statusBar = new Statusbar();
-  throwableObjects = []
+  throwableObjects = [];
 
-  constructor(canvas, keyboard) {
+  constructor(canvas,keyboard) {
     this.ctx = canvas.getContext("2d");
     this.canvas = canvas;
     this.keyboard = keyboard;
     this.draw();
     this.setWorld();
-    this.checkCollisions();
     this.run();
+    
     // this.checkEndbossIntro();
   }
 
   setWorld() {
     this.character.world = this;
   }
-  checkCollisions() {
+  run() {
     setInterval(() => {
     this.checkCollisions();
     this.checkThrowObjects();
@@ -42,7 +42,7 @@ class World {
   checkCollisions(){
       
     this.level.enemies.forEach((enemy) => {
-      if( this.character.isColliding(enemy)) {
+      if (this.character.isColliding(enemy)) {
         this.character.hit();
         this.statusBar.setPercentage(this.character.energy)
         this.character.height();
@@ -50,8 +50,11 @@ class World {
         console.log('Collision with Character, energy ', this.character.energy);
       }
       });
-  }
+    }
+  
 
+
+ 
   draw() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.translate(this.cameraX, 0);
@@ -62,9 +65,10 @@ class World {
     this.addObjectsToMap(this.level.clouds);
     this.addToMap(this.character);
     this.addObjectsToMap(this.level.enemies);
+    this.addObjectsToMap(this.level.smallChicken);
     this.addObjectsToMap(this.throwableObjects);
     // this.addObjectsToMap(this.coints);
-    // this.addObjectsToMap(this.smallChicken);
+    
     // this.addObjectsToMap(this.endBoss);
     this.ctx.translate(-this.cameraX, 0);
     let self = this;
@@ -102,3 +106,4 @@ class World {
     this.ctx.restore();
   }
 }
+
